@@ -1,0 +1,27 @@
+# include settings in here
+
+# where dataset is located
+data_dir: "raw_data"
+classes: 
+  - 'Hand_Closed'
+  - 'Hand_Open'
+  - 'No_Movement'
+  - 'Wrist_Extension'
+  - 'Wrist_Flexion'
+# what should we do to the dataset
+preprocessing: "envelope"
+modalities: ["EMG"]
+
+# hardware sampling frequency
+sampling_frequency: 200
+
+# what the random seeds should be set to
+seed: 0
+
+# its handy to put DL parameters in here too
+algo: "MLP"
+batch_size: 256
+lr: 5e-4
+nepochs: 100
+train_val_test: [0.6, 0.2, 0.2]
+
